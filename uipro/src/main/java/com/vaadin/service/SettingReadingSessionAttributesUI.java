@@ -1,6 +1,10 @@
 package com.vaadin.service;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.servlet.annotation.WebServlet;
+
 import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -12,6 +16,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+
 
 /**
  * This UI is the application entry point. A UI may either represent a browser
@@ -35,7 +40,9 @@ public class SettingReadingSessionAttributesUI extends UI {
 		System.out.println(request.getMethod());
 		System.out.println(request.getParameter("componentName"));
 		System.out.println(request.getParameter("componentValue"));
-		
+		Logger.getLogger(SettingReadingSessionAttributesUI.class.getName()).log(Level.INFO, request.getParameter("componentName"));
+		Logger.getLogger(SettingReadingSessionAttributesUI.class.getName()).log(Level.INFO, "In Logger --------------->>>>>>>>>");
+
 		statusHolder.addComponent(textField);
 		statusHolder.addComponent(new Button("Reload page", new Button.ClickListener() {
 

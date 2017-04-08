@@ -1,0 +1,9 @@
+cf api http://uipro.mybluemix.net
+
+cf login
+
+cf push uipro -p vaadin-jpa-application.war
+
+url : http://uipro.mybluemix.net/uipro/
+
+cf logs uipro Tail

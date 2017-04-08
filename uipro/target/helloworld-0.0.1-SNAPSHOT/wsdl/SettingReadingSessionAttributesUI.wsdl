@@ -1,0 +1,7634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.vaadin.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.vaadin.com" xmlns:intf="http://service.vaadin.com" xmlns:tns1="http://util.java" xmlns:tns10="http://window.ui.shared.vaadin.com" xmlns:tns11="http://nodes.jsoup.org" xmlns:tns12="http://declarative.ui.vaadin.com" xmlns:tns13="http://json.elemental" xmlns:tns2="http://lang.java" xmlns:tns3="http://concurrent.util.java" xmlns:tns4="http://ui.vaadin.com" xmlns:tns5="http://event.vaadin.com" xmlns:tns6="http://reflect.lang.java" xmlns:tns7="http://server.vaadin.com" xmlns:tns8="http://navigator.vaadin.com" xmlns:tns9="http://communication.server.vaadin.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.vaadin.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://declarative.ui.vaadin.com"/>
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <import namespace="http://server.vaadin.com"/>
+   <import namespace="http://ui.vaadin.com"/>
+   <import namespace="http://event.vaadin.com"/>
+   <import namespace="http://window.ui.shared.vaadin.com"/>
+   <import namespace="http://nodes.jsoup.org"/>
+   <import namespace="http://util.java"/>
+   <import namespace="http://concurrent.util.java"/>
+   <import namespace="http://communication.server.vaadin.com"/>
+   <import namespace="http://reflect.lang.java"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://navigator.vaadin.com"/>
+   <import namespace="http://json.elemental"/>
+   <element name="iteratorReturn" type="xsd:anyType"/>
+   <element name="runnable" type="xsd:anyType"/>
+   <element name="accessReturn" type="xsd:anyType"/>
+   <element name="content" type="xsd:anyType"/>
+   <element name="isClosingReturn" type="xsd:boolean"/>
+   <element name="component" type="tns4:Component"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <element name="getWindowsReturn" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="listener" type="xsd:anyType"/>
+   <element name="listener1" type="xsd:anyType"/>
+   <element name="eventType" type="xsd:anyType"/>
+   <element name="target" type="xsd:anyType"/>
+   <element name="eventType1" type="tns2:Class"/>
+   <element name="target1" type="xsd:anyType"/>
+   <element name="methodName" type="xsd:string"/>
+   <element name="eventType2" type="tns2:Class"/>
+   <element name="target2" type="xsd:anyType"/>
+   <element name="method" type="xsd:anyType"/>
+   <element name="getCurrentReturn" type="tns4:UI"/>
+   <element name="action" type="xsd:anyType"/>
+   <element name="listener2" type="tns5:MouseEvents_ClickListener"/>
+   <element name="listener3" type="tns4:Component_Listener"/>
+   <element name="eventType3" type="tns2:Class"/>
+   <element name="target3" type="xsd:anyType"/>
+   <element name="methodName1" type="xsd:string"/>
+   <element name="eventType4" type="tns2:Class"/>
+   <element name="target4" type="xsd:anyType"/>
+   <element name="method1" type="tns6:Method"/>
+   <element name="getThemeReturn" type="xsd:string"/>
+   <element name="session" type="tns7:VaadinSession"/>
+   <element name="getPageReturn" type="tns7:Page"/>
+   <element name="request" type="xsd:anyType"/>
+   <element name="uiId" type="xsd:int"/>
+   <element name="embedId" type="xsd:string"/>
+   <element name="theme" type="xsd:string"/>
+   <element name="runnable1" type="tns2:Runnable"/>
+   <element name="fault" type="xsd:anyType"/>
+   <element name="getLastHeartbeatTimestampReturn" type="xsd:long"/>
+   <element name="getConnectorTrackerReturn" type="tns4:ConnectorTracker"/>
+   <element name="lastHeartbeat" type="xsd:long"/>
+   <element name="listener4" type="tns5:MouseEvents_ClickListener"/>
+   <element name="getTooltipConfigurationReturn" type="tns4:TooltipConfiguration"/>
+   <element name="getComponentCountReturn" type="xsd:int"/>
+   <element name="isConnectorEnabledReturn" type="xsd:boolean"/>
+   <element name="getNotificationConfigurationReturn" type="tns4:NotificationConfiguration"/>
+   <element name="getLoadingIndicatorConfigurationReturn" type="tns4:LoadingIndicatorConfiguration"/>
+   <element name="actionHandler" type="xsd:anyType"/>
+   <element name="focusable" type="tns4:Component_Focusable"/>
+   <element name="getReconnectDialogConfigurationReturn" type="tns4:ReconnectDialogConfiguration"/>
+   <element name="pushConnection" type="tns9:PushConnection"/>
+   <element name="listener5" type="xsd:anyType"/>
+   <element name="overlayContainerLabel" type="xsd:string"/>
+   <element name="lastProcessedClientToServerId" type="xsd:int"/>
+   <element name="getPushConnectionReturn" type="tns9:PushConnection"/>
+   <element name="getLastProcessedClientToServerIdReturn" type="xsd:int"/>
+   <element name="getPushConfigurationReturn" type="tns4:PushConfiguration"/>
+   <element name="getOverlayContainerLabelReturn" type="xsd:string"/>
+   <element name="getSessionReturn" type="tns7:VaadinSession"/>
+   <element name="action1" type="tns5:Action"/>
+   <element name="ui" type="tns4:UI"/>
+   <element name="caption" type="xsd:string"/>
+   <element name="getScrollLeftReturn" type="xsd:int"/>
+   <element name="source" type="xsd:anyType"/>
+   <element name="variables" type="apachesoap:Map"/>
+   <element name="getUIReturn" type="tns4:UI"/>
+   <complexType name="ArrayOf_tns4_Component">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="tns4:Component"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_xsd_int">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <element name="window" type="tns4:Window"/>
+   <element name="intervalInMillis" type="xsd:int"/>
+   <element name="window1" type="tns4:Window"/>
+   <element name="removeWindowReturn" type="xsd:boolean"/>
+   <element name="target5" type="xsd:anyType"/>
+   <element name="fault1" type="xsd:anyType"/>
+   <element name="isResizeLazyReturn" type="xsd:boolean"/>
+   <element name="getStateTypeReturn" type="tns2:Class"/>
+   <element name="getScrollTopReturn" type="xsd:int"/>
+   <element name="scrollLeft" type="xsd:int"/>
+   <element name="scrollTop" type="xsd:int"/>
+   <element name="navigator" type="tns8:Navigator"/>
+   <element name="getUIIdReturn" type="xsd:int"/>
+   <element name="caption1" type="xsd:string"/>
+   <element name="notification" type="xsd:anyType"/>
+   <element name="caption2" type="xsd:string"/>
+   <element name="description" type="xsd:string"/>
+   <element name="type" type="xsd:anyType"/>
+   <element name="htmlContentAllowed" type="xsd:boolean"/>
+   <element name="caption3" type="xsd:string"/>
+   <element name="description1" type="xsd:string"/>
+   <element name="caption4" type="xsd:string"/>
+   <element name="type1" type="tns4:Notification_Type"/>
+   <element name="caption5" type="xsd:string"/>
+   <element name="description2" type="xsd:string"/>
+   <element name="type2" type="tns4:Notification_Type"/>
+   <element name="getTabIndexReturn" type="xsd:int"/>
+   <element name="getPollIntervalReturn" type="xsd:int"/>
+   <element name="listener6" type="tns5:UIEvents_PollListener"/>
+   <element name="actionHandler1" type="tns5:Action_Handler"/>
+   <element name="resizeLazy" type="xsd:boolean"/>
+   <element name="listener7" type="tns5:MouseEvents_ClickListener"/>
+   <element name="getLocaleServiceReturn" type="tns7:LocaleService"/>
+   <element name="getEmbedIdReturn" type="xsd:string"/>
+   <element name="request1" type="tns7:VaadinRequest"/>
+   <element name="tabIndex" type="xsd:int"/>
+   <element name="getNavigatorReturn" type="tns8:Navigator"/>
+   <element name="getContentReturn" type="tns4:Component"/>
+   <element name="width" type="xsd:float"/>
+   <element name="unit" type="tns7:Sizeable_Unit"/>
+   <element name="width1" type="xsd:string"/>
+   <element name="height" type="xsd:float"/>
+   <element name="unit1" type="tns7:Sizeable_Unit"/>
+   <element name="height1" type="xsd:string"/>
+   <element name="listener8" type="xsd:anyType"/>
+   <element name="listener9" type="xsd:anyType"/>
+   <element name="listener10" type="tns4:HasComponents_ComponentDetachListener"/>
+   <element name="listener11" type="tns4:HasComponents_ComponentAttachListener"/>
+   <element name="design" type="xsd:anyType"/>
+   <element name="designContext" type="tns12:DesignContext"/>
+   <element name="design1" type="tns11:Element"/>
+   <element name="designContext1" type="tns12:DesignContext"/>
+   <element name="content1" type="tns4:Component"/>
+   <element name="getParentReturn" type="xsd:anyType"/>
+   <element name="readOnly" type="xsd:boolean"/>
+   <element name="getIdReturn" type="xsd:string"/>
+   <element name="isReadOnlyReturn" type="xsd:boolean"/>
+   <element name="parent" type="tns4:HasComponents"/>
+   <element name="getDataReturn" type="xsd:anyType"/>
+   <element name="locale" type="tns1:Locale"/>
+   <element name="getLocaleReturn" type="tns1:Locale"/>
+   <element name="isEnabledReturn" type="xsd:boolean"/>
+   <element name="isVisibleReturn" type="xsd:boolean"/>
+   <element name="enabled" type="xsd:boolean"/>
+   <element name="immediate" type="xsd:boolean"/>
+   <element name="isImmediateReturn" type="xsd:boolean"/>
+   <element name="description3" type="xsd:string"/>
+   <element name="getDescriptionReturn" type="xsd:string"/>
+   <element name="visible" type="xsd:boolean"/>
+   <element name="data" type="xsd:anyType"/>
+   <element name="id" type="xsd:string"/>
+   <element name="getCaptionReturn" type="xsd:string"/>
+   <element name="getErrorMessageReturn" type="tns7:ErrorMessage"/>
+   <element name="getWidthReturn" type="xsd:float"/>
+   <element name="getHeightReturn" type="xsd:float"/>
+   <element name="style" type="xsd:string"/>
+   <element name="getPrimaryStyleNameReturn" type="xsd:string"/>
+   <element name="componentError" type="tns7:ErrorMessage"/>
+   <element name="shortcut" type="xsd:anyType"/>
+   <element name="getComponentErrorReturn" type="tns7:ErrorMessage"/>
+   <element name="listener12" type="xsd:anyType"/>
+   <element name="listener13" type="tns5:ContextClickEvent_ContextClickListener"/>
+   <element name="initial" type="xsd:boolean"/>
+   <element name="shortcut1" type="tns5:ShortcutListener"/>
+   <element name="icon" type="tns7:Resource"/>
+   <element name="getIconReturn" type="tns7:Resource"/>
+   <element name="style1" type="xsd:string"/>
+   <element name="style2" type="xsd:string"/>
+   <element name="add" type="xsd:boolean"/>
+   <element name="getWidthUnitsReturn" type="tns7:Sizeable_Unit"/>
+   <element name="getHeightUnitsReturn" type="tns7:Sizeable_Unit"/>
+   <element name="style3" type="xsd:string"/>
+   <element name="style4" type="xsd:string"/>
+   <element name="getStyleNameReturn" type="xsd:string"/>
+   <element name="parentType" type="tns2:Class"/>
+   <element name="findAncestorReturn" type="tns4:HasComponents"/>
+   <element name="getDebugIdReturn" type="xsd:string"/>
+   <element name="captionAsHtml" type="xsd:boolean"/>
+   <element name="isCaptionAsHtmlReturn" type="xsd:boolean"/>
+   <element name="isResponsiveReturn" type="xsd:boolean"/>
+   <element name="id1" type="xsd:string"/>
+   <element name="responsive" type="xsd:boolean"/>
+   <element name="obj" type="xsd:anyType"/>
+   <element name="equalsReturn" type="xsd:boolean"/>
+   <element name="hashCodeReturn" type="xsd:int"/>
+   <element name="getExtensionsReturn" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="isAttachedReturn" type="xsd:boolean"/>
+   <element name="getErrorHandlerReturn" type="tns7:ErrorHandler"/>
+   <element name="errorHandler" type="tns7:ErrorHandler"/>
+   <element name="extension" type="xsd:anyType"/>
+   <element name="eventType5" type="tns2:Class"/>
+   <element name="getListenersReturn" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="listener14" type="xsd:anyType"/>
+   <element name="listener15" type="xsd:anyType"/>
+   <element name="listener16" type="tns7:ClientConnector_DetachListener"/>
+   <element name="listener17" type="tns7:ClientConnector_AttachListener"/>
+   <element name="retrievePendingRpcCallsReturn" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="request2" type="tns7:VaadinRequest"/>
+   <element name="response" type="xsd:anyType"/>
+   <element name="path" type="xsd:string"/>
+   <element name="handleConnectorRequestReturn" type="xsd:boolean"/>
+   <element name="connector" type="tns7:ClientConnector"/>
+   <element name="getAllChildrenIterableReturn" type="xsd:anyType"/>
+   <element name="getConnectorIdReturn" type="xsd:string"/>
+   <element name="rpcInterfaceName" type="xsd:string"/>
+   <element name="getRpcManagerReturn" type="xsd:anyType"/>
+   <element name="encodeStateReturn" type="xsd:anyType"/>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://declarative.ui.vaadin.com"/>
+   <import namespace="http://server.vaadin.com"/>
+   <import namespace="http://service.vaadin.com"/>
+   <import namespace="http://ui.vaadin.com"/>
+   <import namespace="http://event.vaadin.com"/>
+   <import namespace="http://window.ui.shared.vaadin.com"/>
+   <import namespace="http://nodes.jsoup.org"/>
+   <import namespace="http://util.java"/>
+   <import namespace="http://concurrent.util.java"/>
+   <import namespace="http://communication.server.vaadin.com"/>
+   <import namespace="http://reflect.lang.java"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://navigator.vaadin.com"/>
+   <import namespace="http://json.elemental"/>
+   <complexType name="Vector">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <complexType name="mapItem">
+    <sequence>
+     <element name="key" nillable="true" type="xsd:anyType"/>
+     <element name="value" nillable="true" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <complexType name="Map">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://server.vaadin.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://declarative.ui.vaadin.com"/>
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <import namespace="http://service.vaadin.com"/>
+   <import namespace="http://ui.vaadin.com"/>
+   <import namespace="http://event.vaadin.com"/>
+   <import namespace="http://window.ui.shared.vaadin.com"/>
+   <import namespace="http://nodes.jsoup.org"/>
+   <import namespace="http://util.java"/>
+   <import namespace="http://concurrent.util.java"/>
+   <import namespace="http://communication.server.vaadin.com"/>
+   <import namespace="http://reflect.lang.java"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://navigator.vaadin.com"/>
+   <import namespace="http://json.elemental"/>
+   <complexType abstract="true" name="AbstractClientConnector">
+    <sequence>
+     <element name="UI" nillable="true" type="tns4:UI"/>
+     <element name="attached" type="xsd:boolean"/>
+     <element name="connectorEnabled" type="xsd:boolean"/>
+     <element name="connectorId" nillable="true" type="xsd:string"/>
+     <element name="errorHandler" nillable="true" type="xsd:anyType"/>
+     <element name="extensions" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+     <element name="stateType" nillable="true" type="tns2:Class"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://ui.vaadin.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://declarative.ui.vaadin.com"/>
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <import namespace="http://server.vaadin.com"/>
+   <import namespace="http://service.vaadin.com"/>
+   <import namespace="http://event.vaadin.com"/>
+   <import namespace="http://window.ui.shared.vaadin.com"/>
+   <import namespace="http://nodes.jsoup.org"/>
+   <import namespace="http://util.java"/>
+   <import namespace="http://concurrent.util.java"/>
+   <import namespace="http://communication.server.vaadin.com"/>
+   <import namespace="http://reflect.lang.java"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://navigator.vaadin.com"/>
+   <import namespace="http://json.elemental"/>
+   <complexType abstract="true" name="AbstractComponent">
+    <complexContent>
+     <extension base="tns7:AbstractClientConnector">
+      <sequence>
+       <element name="caption" nillable="true" type="xsd:string"/>
+       <element name="captionAsHtml" type="xsd:boolean"/>
+       <element name="componentError" nillable="true" type="xsd:anyType"/>
+       <element name="data" nillable="true" type="xsd:anyType"/>
+       <element name="debugId" nillable="true" type="xsd:string"/>
+       <element name="description" nillable="true" type="xsd:string"/>
+       <element name="enabled" type="xsd:boolean"/>
+       <element name="errorMessage" nillable="true" type="tns7:ErrorMessage"/>
+       <element name="height" type="xsd:float"/>
+       <element name="heightUnits" nillable="true" type="xsd:anyType"/>
+       <element name="icon" nillable="true" type="xsd:anyType"/>
+       <element name="id" nillable="true" type="xsd:string"/>
+       <element name="immediate" type="xsd:boolean"/>
+       <element name="locale" nillable="true" type="xsd:anyType"/>
+       <element name="parent" nillable="true" type="xsd:anyType"/>
+       <element name="primaryStyleName" nillable="true" type="xsd:string"/>
+       <element name="readOnly" type="xsd:boolean"/>
+       <element name="responsive" type="xsd:boolean"/>
+       <element name="styleName" nillable="true" type="xsd:string"/>
+       <element name="visible" type="xsd:boolean"/>
+       <element name="width" type="xsd:float"/>
+       <element name="widthUnits" nillable="true" type="tns7:Sizeable_Unit"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType abstract="true" name="AbstractSingleComponentContainer">
+    <complexContent>
+     <extension base="tns4:AbstractComponent">
+      <sequence>
+       <element name="componentCount" type="xsd:int"/>
+       <element name="content" nillable="true" type="tns4:Component"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType abstract="true" name="UI">
+    <complexContent>
+     <extension base="tns4:AbstractSingleComponentContainer">
+      <sequence>
+       <element name="UIId" type="xsd:int"/>
+       <element name="closing" type="xsd:boolean"/>
+       <element name="connectorTracker" nillable="true" type="xsd:anyType"/>
+       <element name="embedId" nillable="true" type="xsd:string"/>
+       <element name="focusedComponent" nillable="true" type="xsd:anyType"/>
+       <element name="lastHeartbeatTimestamp" type="xsd:long"/>
+       <element name="lastProcessedClientToServerId" type="xsd:int"/>
+       <element name="loadingIndicatorConfiguration" nillable="true" type="xsd:anyType"/>
+       <element name="localeService" nillable="true" type="xsd:anyType"/>
+       <element name="navigator" nillable="true" type="xsd:anyType"/>
+       <element name="notificationConfiguration" nillable="true" type="xsd:anyType"/>
+       <element name="overlayContainerLabel" nillable="true" type="xsd:string"/>
+       <element name="page" nillable="true" type="xsd:anyType"/>
+       <element name="pollInterval" type="xsd:int"/>
+       <element name="pushConfiguration" nillable="true" type="xsd:anyType"/>
+       <element name="pushConnection" nillable="true" type="xsd:anyType"/>
+       <element name="reconnectDialogConfiguration" nillable="true" type="xsd:anyType"/>
+       <element name="resizeLazy" type="xsd:boolean"/>
+       <element name="scrollLeft" type="xsd:int"/>
+       <element name="scrollTop" type="xsd:int"/>
+       <element name="session" nillable="true" type="xsd:anyType"/>
+       <element name="tabIndex" type="xsd:int"/>
+       <element name="theme" nillable="true" type="xsd:string"/>
+       <element name="tooltipConfiguration" nillable="true" type="xsd:anyType"/>
+       <element name="windows" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Panel">
+    <complexContent>
+     <extension base="tns4:AbstractSingleComponentContainer">
+      <sequence>
+       <element name="scrollLeft" type="xsd:int"/>
+       <element name="scrollTop" type="xsd:int"/>
+       <element name="tabIndex" type="xsd:int"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Window">
+    <complexContent>
+     <extension base="tns4:Panel">
+      <sequence>
+       <element name="assistiveDescription" nillable="true" type="impl:ArrayOf_tns4_Component"/>
+       <element name="assistivePostfix" nillable="true" type="xsd:string"/>
+       <element name="assistivePrefix" nillable="true" type="xsd:string"/>
+       <element name="assistiveRole" nillable="true" type="xsd:anyType"/>
+       <element name="closable" type="xsd:boolean"/>
+       <element maxOccurs="unbounded" name="closeShortcut" nillable="true" type="impl:ArrayOf_xsd_int"/>
+       <element name="closeShortcuts" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+       <element name="draggable" type="xsd:boolean"/>
+       <element name="modal" type="xsd:boolean"/>
+       <element maxOccurs="unbounded" name="position" type="xsd:int"/>
+       <element name="positionX" type="xsd:int"/>
+       <element name="positionY" type="xsd:int"/>
+       <element name="resizable" type="xsd:boolean"/>
+       <element name="resizeLazy" type="xsd:boolean"/>
+       <element name="tabStopBottomAssistiveText" nillable="true" type="xsd:string"/>
+       <element name="tabStopEnabled" type="xsd:boolean"/>
+       <element name="tabStopTopAssistiveText" nillable="true" type="xsd:string"/>
+       <element name="windowMode" nillable="true" type="xsd:anyType"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://declarative.ui.vaadin.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <import namespace="http://server.vaadin.com"/>
+   <import namespace="http://service.vaadin.com"/>
+   <import namespace="http://ui.vaadin.com"/>
+   <import namespace="http://event.vaadin.com"/>
+   <import namespace="http://window.ui.shared.vaadin.com"/>
+   <import namespace="http://nodes.jsoup.org"/>
+   <import namespace="http://util.java"/>
+   <import namespace="http://concurrent.util.java"/>
+   <import namespace="http://communication.server.vaadin.com"/>
+   <import namespace="http://reflect.lang.java"/>
+   <import namespace="http://lang.java"/>
+   <import namespace="http://navigator.vaadin.com"/>
+   <import namespace="http://json.elemental"/>
+   <complexType name="DesignContext">
+    <sequence>
+     <element name="packagePrefixes" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+     <element name="rootComponent" nillable="true" type="tns4:Component"/>
+     <element name="shouldWriteDataDelegate" nillable="true" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getTooltipConfigurationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="iteratorRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="attachResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerRequest">
+
+      <wsdl:part element="intf:listener2" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPollIntervalResponse">
+
+      <wsdl:part element="intf:getPollIntervalReturn" name="getPollIntervalReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getErrorHandlerResponse">
+
+      <wsdl:part element="intf:getErrorHandlerReturn" name="getErrorHandlerReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConnectorIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setDescriptionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdRequest">
+
+      <wsdl:part element="intf:id" name="id">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightUndefinedRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getUIIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeStyleNameResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="readDesignResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCurrentRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="isAttachedResponse">
+
+      <wsdl:part element="intf:isAttachedReturn" name="isAttachedReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastProcessedClientToServerIdResponse">
+
+      <wsdl:part element="intf:getLastProcessedClientToServerIdReturn" name="getLastProcessedClientToServerIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHeightRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="accessSynchronouslyResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getOverlayContainerLabelResponse">
+
+      <wsdl:part element="intf:getOverlayContainerLabelReturn" name="getOverlayContainerLabelReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="equalsRequest">
+
+      <wsdl:part element="intf:obj" name="obj">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastProcessedClientToServerIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmbedIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdResponse">
+
+      <wsdl:part element="intf:getIdReturn" name="getIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getErrorMessageRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="focusRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setImmediateResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPushConnectionResponse">
+
+      <wsdl:part element="intf:getPushConnectionReturn" name="getPushConnectionReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeComponentAttachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="retrievePendingRpcCallsResponse">
+
+      <wsdl:part element="intf:retrievePendingRpcCallsReturn" name="retrievePendingRpcCallsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isClosingRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setNavigatorResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setVisibleRequest">
+
+      <wsdl:part element="intf:visible" name="visible">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastProcessedClientToServerIdResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="markAsDirtyRecursiveResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setCurrentRequest">
+
+      <wsdl:part element="intf:ui" name="ui">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCurrentResponse">
+
+      <wsdl:part element="intf:getCurrentReturn" name="getCurrentReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmbedIdResponse">
+
+      <wsdl:part element="intf:getEmbedIdReturn" name="getEmbedIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDebugIdResponse">
+
+      <wsdl:part element="intf:getDebugIdReturn" name="getDebugIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removePollListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setReadOnlyResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getUIRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getErrorMessageResponse">
+
+      <wsdl:part element="intf:getErrorMessageReturn" name="getErrorMessageReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setResizeLazyRequest">
+
+      <wsdl:part element="intf:resizeLazy" name="resizeLazy">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="requestRepaintAllResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerRequest">
+
+      <wsdl:part element="intf:listener" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getParentResponse">
+
+      <wsdl:part element="intf:getParentReturn" name="getParentReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTabIndexResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPollIntervalRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setImmediateRequest">
+
+      <wsdl:part element="intf:immediate" name="immediate">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setParentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setCaptionAsHtmlRequest">
+
+      <wsdl:part element="intf:captionAsHtml" name="captionAsHtml">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="accessRequest">
+
+      <wsdl:part element="intf:runnable" name="runnable">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse5">
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightUndefinedResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse4">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse3">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse2">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="setEnabledRequest">
+
+      <wsdl:part element="intf:enabled" name="enabled">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setScrollTopRequest">
+
+      <wsdl:part element="intf:scrollTop" name="scrollTop">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="doRefreshRequest">
+
+      <wsdl:part element="intf:request1" name="request">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStyleNameResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="setScrollLeftResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeFromParentRequest">
+
+      <wsdl:part element="intf:content1" name="content">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLocaleRequest">
+
+      <wsdl:part element="intf:locale" name="locale">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="writeDesignRequest">
+
+      <wsdl:part element="intf:design1" name="design">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:designContext1" name="designContext">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDataRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="isResizeLazyResponse">
+
+      <wsdl:part element="intf:isResizeLazyReturn" name="isResizeLazyReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPushConnectionRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setEnabledResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getHeightUnitsResponse">
+
+      <wsdl:part element="intf:getHeightUnitsReturn" name="getHeightUnitsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="attachRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getComponentErrorRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getScrollTopResponse">
+
+      <wsdl:part element="intf:getScrollTopReturn" name="getScrollTopReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeComponentAttachListenerRequest">
+
+      <wsdl:part element="intf:listener11" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setScrollTopResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="isConnectorEnabledRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeWindowRequest">
+
+      <wsdl:part element="intf:window1" name="window">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setResponsiveRequest">
+
+      <wsdl:part element="intf:responsive" name="responsive">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRpcManagerRequest">
+
+      <wsdl:part element="intf:rpcInterfaceName" name="rpcInterfaceName">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDataRequest">
+
+      <wsdl:part element="intf:data" name="data">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPushConnectionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerRequest2">
+
+      <wsdl:part element="intf:eventType" name="eventType">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:target" name="target">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findAncestorResponse">
+
+      <wsdl:part element="intf:findAncestorReturn" name="findAncestorReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerRequest1">
+
+      <wsdl:part element="intf:listener1" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerRequest4">
+
+      <wsdl:part element="intf:eventType2" name="eventType">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:target2" name="target">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:method" name="method">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addWindowRequest">
+
+      <wsdl:part element="intf:window" name="window">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerRequest3">
+
+      <wsdl:part element="intf:eventType1" name="eventType">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:target1" name="target">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:methodName" name="methodName">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastHeartbeatTimestampResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeExtensionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="readDesignRequest">
+
+      <wsdl:part element="intf:design" name="design">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:designContext" name="designContext">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getScrollLeftRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="requestRepaintRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getExtensionsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setContentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getSessionResponse">
+
+      <wsdl:part element="intf:getSessionReturn" name="getSessionReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="handleConnectorRequestRequest">
+
+      <wsdl:part element="intf:request2" name="request">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:response" name="response">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:path" name="path">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getComponentCountRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addPollListenerRequest">
+
+      <wsdl:part element="intf:listener6" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPushConfigurationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addComponentDetachListenerRequest">
+
+      <wsdl:part element="intf:listener9" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setReadOnlyRequest">
+
+      <wsdl:part element="intf:readOnly" name="readOnly">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrimaryStyleNameResponse">
+
+      <wsdl:part element="intf:getPrimaryStyleNameReturn" name="getPrimaryStyleNameReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeClickListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeStyleNameRequest">
+
+      <wsdl:part element="intf:style4" name="style">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWidthRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="hashCodeResponse">
+
+      <wsdl:part element="intf:hashCodeReturn" name="hashCodeReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="closeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPageRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getWidthResponse">
+
+      <wsdl:part element="intf:getWidthReturn" name="getWidthReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSizeFullResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getIconRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setErrorHandlerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeComponentDetachListenerRequest">
+
+      <wsdl:part element="intf:listener10" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isImmediateRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addComponentDetachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setPushConnectionRequest">
+
+      <wsdl:part element="intf:pushConnection" name="pushConnection">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDescriptionRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="beforeClientResponseResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getIconResponse">
+
+      <wsdl:part element="intf:getIconReturn" name="getIconReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastHeartbeatTimestampResponse">
+
+      <wsdl:part element="intf:getLastHeartbeatTimestampReturn" name="getLastHeartbeatTimestampReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllChildrenIterableResponse">
+
+      <wsdl:part element="intf:getAllChildrenIterableReturn" name="getAllChildrenIterableReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthUndefinedRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="pushRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setVisibleResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setStyleNameResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getWidthUnitsResponse">
+
+      <wsdl:part element="intf:getWidthUnitsReturn" name="getWidthUnitsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="setThemeResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="iteratorResponse">
+
+      <wsdl:part element="intf:iteratorReturn" name="iteratorReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getWidthUnitsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addDetachListenerRequest">
+
+      <wsdl:part element="intf:listener14" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUIResponse">
+
+      <wsdl:part element="intf:getUIReturn" name="getUIReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNavigatorRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="encodeStateRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setSizeUndefinedRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setComponentErrorRequest">
+
+      <wsdl:part element="intf:componentError" name="componentError">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getThemeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeWindowResponse">
+
+      <wsdl:part element="intf:removeWindowReturn" name="removeWindowReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="scrollIntoViewRequest">
+
+      <wsdl:part element="intf:component" name="component">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="scrollIntoViewResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="isEnabledRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setDebugIdRequest">
+
+      <wsdl:part element="intf:id1" name="id">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="beforeClientResponseRequest">
+
+      <wsdl:part element="intf:initial" name="initial">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addActionRequest">
+
+      <wsdl:part element="intf:action" name="action">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeContextClickListenerRequest">
+
+      <wsdl:part element="intf:listener13" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightRequest">
+
+      <wsdl:part element="intf:height" name="height">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:unit1" name="unit">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="UIDetachedException">
+
+      <wsdl:part element="intf:fault" name="fault">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getReconnectDialogConfigurationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="addStyleNameRequest">
+
+      <wsdl:part element="intf:style3" name="style">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeActionRequest">
+
+      <wsdl:part element="intf:action1" name="action">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFocusedComponentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthUndefinedResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addStyleNameResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeFromParentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getLoadingIndicatorConfigurationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="closeResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removePollListenerRequest">
+
+      <wsdl:part element="intf:listener5" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAttachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addContextClickListenerRequest">
+
+      <wsdl:part element="intf:listener12" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="hashCodeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="encodeStateResponse">
+
+      <wsdl:part element="intf:encodeStateReturn" name="encodeStateReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConnectorTrackerRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeClickListenerRequest">
+
+      <wsdl:part element="intf:listener4" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAttachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setErrorHandlerRequest">
+
+      <wsdl:part element="intf:errorHandler" name="errorHandler">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isVisibleResponse">
+
+      <wsdl:part element="intf:isVisibleReturn" name="isVisibleReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addShortcutListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addClickListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="handleConnectorRequestResponse">
+
+      <wsdl:part element="intf:handleConnectorRequestReturn" name="handleConnectorRequestReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="writeDesignResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getRpcManagerResponse">
+
+      <wsdl:part element="intf:getRpcManagerReturn" name="getRpcManagerReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLoadingIndicatorConfigurationResponse">
+
+      <wsdl:part element="intf:getLoadingIndicatorConfigurationReturn" name="getLoadingIndicatorConfigurationReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isConnectorEnabledResponse">
+
+      <wsdl:part element="intf:isConnectorEnabledReturn" name="isConnectorEnabledReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setParentRequest">
+
+      <wsdl:part element="intf:parent" name="parent">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="pushResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getWindowsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getTabIndexRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getListenersResponse">
+
+      <wsdl:part element="intf:getListenersReturn" name="getListenersReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addDetachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="markAsDirtyResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthRequest1">
+
+      <wsdl:part element="intf:width1" name="width">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDebugIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest">
+
+      <wsdl:part element="intf:caption1" name="caption">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHeightResponse">
+
+      <wsdl:part element="intf:getHeightReturn" name="getHeightReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setContentRequest">
+
+      <wsdl:part element="intf:content" name="content">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isResponsiveRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCaptionRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getContentRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerResponse2">
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerResponse3">
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="addComponentAttachListenerRequest">
+
+      <wsdl:part element="intf:listener8" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeDetachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getLocaleServiceResponse">
+
+      <wsdl:part element="intf:getLocaleServiceReturn" name="getLocaleServiceReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="isClosingResponse">
+
+      <wsdl:part element="intf:isClosingReturn" name="isClosingReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeActionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="isCaptionAsHtmlResponse">
+
+      <wsdl:part element="intf:isCaptionAsHtmlReturn" name="isCaptionAsHtmlReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAttachListenerRequest">
+
+      <wsdl:part element="intf:listener17" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightRequest1">
+
+      <wsdl:part element="intf:height1" name="height">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastProcessedClientToServerIdRequest">
+
+      <wsdl:part element="intf:lastProcessedClientToServerId" name="lastProcessedClientToServerId">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTabIndexResponse">
+
+      <wsdl:part element="intf:getTabIndexReturn" name="getTabIndexReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="focusResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getStyleNameResponse">
+
+      <wsdl:part element="intf:getStyleNameReturn" name="getStyleNameReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="detachResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="accessSynchronouslyRequest">
+
+      <wsdl:part element="intf:runnable1" name="runnable">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNotificationConfigurationResponse">
+
+      <wsdl:part element="intf:getNotificationConfigurationReturn" name="getNotificationConfigurationReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findAncestorRequest">
+
+      <wsdl:part element="intf:parentType" name="parentType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getComponentCountResponse">
+
+      <wsdl:part element="intf:getComponentCountReturn" name="getComponentCountReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addActionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerResponse3">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerResponse4">
+
+   </wsdl:message>
+
+   <wsdl:message name="setSizeFullRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerResponse1">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeListenerResponse2">
+
+   </wsdl:message>
+
+   <wsdl:message name="isReadOnlyRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="isResizeLazyRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getErrorHandlerRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setSessionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getCaptionResponse">
+
+      <wsdl:part element="intf:getCaptionReturn" name="getCaptionReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConnectorIdResponse">
+
+      <wsdl:part element="intf:getConnectorIdReturn" name="getConnectorIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setOverlayContainerLabelRequest">
+
+      <wsdl:part element="intf:overlayContainerLabel" name="overlayContainerLabel">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPrimaryStyleNameRequest">
+
+      <wsdl:part element="intf:style" name="style">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPrimaryStyleNameResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="isReadOnlyResponse">
+
+      <wsdl:part element="intf:isReadOnlyReturn" name="isReadOnlyReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="PaintException">
+
+      <wsdl:part element="intf:fault1" name="fault">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCaptionRequest">
+
+      <wsdl:part element="intf:caption" name="caption">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="changeVariablesRequest">
+
+      <wsdl:part element="intf:source" name="source">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:variables" name="variables">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeDetachListenerRequest">
+
+      <wsdl:part element="intf:listener16" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getScrollTopRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getHeightUnitsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="paintContentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setResponsiveResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addComponentAttachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeActionHandlerRequest">
+
+      <wsdl:part element="intf:actionHandler" name="actionHandler">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setOverlayContainerLabelResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setStyleNameRequest1">
+
+      <wsdl:part element="intf:style2" name="style">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:add" name="add">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addActionHandlerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getScrollLeftResponse">
+
+      <wsdl:part element="intf:getScrollLeftReturn" name="getScrollLeftReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="markAsDirtyRecursiveRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getSessionRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeExtensionRequest">
+
+      <wsdl:part element="intf:extension" name="extension">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDataResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="changeVariablesResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getConnectorTrackerResponse">
+
+      <wsdl:part element="intf:getConnectorTrackerReturn" name="getConnectorTrackerReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getOverlayContainerLabelRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getThemeResponse">
+
+      <wsdl:part element="intf:getThemeReturn" name="getThemeReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="doInitResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="paintContentRequest">
+
+      <wsdl:part element="intf:target5" name="target">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNotificationConfigurationRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getStyleNameRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addActionHandlerRequest">
+
+      <wsdl:part element="intf:actionHandler1" name="actionHandler">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setScrollLeftRequest">
+
+      <wsdl:part element="intf:scrollLeft" name="scrollLeft">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerRequest3">
+
+      <wsdl:part element="intf:eventType4" name="eventType">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:target4" name="target">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:method1" name="method">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isResponsiveResponse">
+
+      <wsdl:part element="intf:isResponsiveReturn" name="isResponsiveReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerRequest2">
+
+      <wsdl:part element="intf:eventType3" name="eventType">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:target3" name="target">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:methodName1" name="methodName">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIconRequest">
+
+      <wsdl:part element="intf:icon" name="icon">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addListenerRequest1">
+
+      <wsdl:part element="intf:listener3" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="doRefreshResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="isImmediateResponse">
+
+      <wsdl:part element="intf:isImmediateReturn" name="isImmediateReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getComponentErrorResponse">
+
+      <wsdl:part element="intf:getComponentErrorReturn" name="getComponentErrorReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSessionRequest">
+
+      <wsdl:part element="intf:session" name="session">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setPollIntervalRequest">
+
+      <wsdl:part element="intf:intervalInMillis" name="intervalInMillis">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDebugIdResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getLocaleServiceRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setLocaleResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setFocusedComponentRequest">
+
+      <wsdl:part element="intf:focusable" name="focusable">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStyleNameRequest">
+
+      <wsdl:part element="intf:style1" name="style">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTabIndexRequest">
+
+      <wsdl:part element="intf:tabIndex" name="tabIndex">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLocaleResponse">
+
+      <wsdl:part element="intf:getLocaleReturn" name="getLocaleReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getPrimaryStyleNameRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="addWindowResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addClickListenerRequest">
+
+      <wsdl:part element="intf:listener7" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="retrievePendingRpcCallsRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setPollIntervalResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setCurrentResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="equalsResponse">
+
+      <wsdl:part element="intf:equalsReturn" name="equalsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="requestRepaintResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeContextClickListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getDataResponse">
+
+      <wsdl:part element="intf:getDataReturn" name="getDataReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateTypeRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getReconnectDialogConfigurationResponse">
+
+      <wsdl:part element="intf:getReconnectDialogConfigurationReturn" name="getReconnectDialogConfigurationReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest4">
+
+      <wsdl:part element="intf:caption4" name="caption">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:type1" name="type">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="detachRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest3">
+
+      <wsdl:part element="intf:caption3" name="caption">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:description1" name="description">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest5">
+
+      <wsdl:part element="intf:caption5" name="caption">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:description2" name="description">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:type2" name="type">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest2">
+
+      <wsdl:part element="intf:caption2" name="caption">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:description" name="description">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:type" name="type">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:htmlContentAllowed" name="htmlContentAllowed">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="doInitRequest">
+
+      <wsdl:part element="intf:request" name="request">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:uiId" name="uiId">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:embedId" name="embedId">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="showNotificationRequest1">
+
+      <wsdl:part element="intf:notification" name="notification">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAttachListenerRequest">
+
+      <wsdl:part element="intf:listener15" name="listener">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addContextClickListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addShortcutListenerRequest">
+
+      <wsdl:part element="intf:shortcut" name="shortcut">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLocaleRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="setWidthRequest">
+
+      <wsdl:part element="intf:width" name="width">
+
+      </wsdl:part>
+
+      <wsdl:part element="intf:unit" name="unit">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setNavigatorRequest">
+
+      <wsdl:part element="intf:navigator" name="navigator">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLastHeartbeatTimestampRequest">
+
+      <wsdl:part element="intf:lastHeartbeat" name="lastHeartbeat">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="requestRepaintAllRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="markAsDirtyRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeShortcutListenerRequest">
+
+      <wsdl:part element="intf:shortcut1" name="shortcut">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setHeightResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setDescriptionRequest">
+
+      <wsdl:part element="intf:description3" name="description">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExtensionsResponse">
+
+      <wsdl:part element="intf:getExtensionsReturn" name="getExtensionsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllChildrenIterableRequest">
+
+      <wsdl:part element="intf:connector" name="connector">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="accessResponse">
+
+      <wsdl:part element="intf:accessReturn" name="accessReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getContentResponse">
+
+      <wsdl:part element="intf:getContentReturn" name="getContentReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCaptionAsHtmlResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="addPollListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setComponentErrorResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPageResponse">
+
+      <wsdl:part element="intf:getPageReturn" name="getPageReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setThemeRequest">
+
+      <wsdl:part element="intf:theme" name="theme">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateTypeResponse">
+
+      <wsdl:part element="intf:getStateTypeReturn" name="getStateTypeReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isEnabledResponse">
+
+      <wsdl:part element="intf:isEnabledReturn" name="isEnabledReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setSizeUndefinedResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="setResizeLazyResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeComponentDetachListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="removeActionHandlerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getUIIdResponse">
+
+      <wsdl:part element="intf:getUIIdReturn" name="getUIIdReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNavigatorResponse">
+
+      <wsdl:part element="intf:getNavigatorReturn" name="getNavigatorReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isVisibleRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getTooltipConfigurationResponse">
+
+      <wsdl:part element="intf:getTooltipConfigurationReturn" name="getTooltipConfigurationReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isAttachedRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getListenersRequest">
+
+      <wsdl:part element="intf:eventType5" name="eventType">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDescriptionResponse">
+
+      <wsdl:part element="intf:getDescriptionReturn" name="getDescriptionReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIconResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getParentRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="getWindowsResponse">
+
+      <wsdl:part element="intf:getWindowsReturn" name="getWindowsReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeShortcutListenerResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getPushConfigurationResponse">
+
+      <wsdl:part element="intf:getPushConfigurationReturn" name="getPushConfigurationReturn">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCaptionResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="getLastHeartbeatTimestampRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="isCaptionAsHtmlRequest">
+
+   </wsdl:message>
+
+   <wsdl:portType name="SettingReadingSessionAttributesUI">
+
+      <wsdl:operation name="iterator">
+
+         <wsdl:input message="intf:iteratorRequest" name="iteratorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:iteratorResponse" name="iteratorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="push">
+
+         <wsdl:input message="intf:pushRequest" name="pushRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:pushResponse" name="pushResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="access" parameterOrder="runnable">
+
+         <wsdl:input message="intf:accessRequest" name="accessRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:accessResponse" name="accessResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="close">
+
+         <wsdl:input message="intf:closeRequest" name="closeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:closeResponse" name="closeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="attach">
+
+         <wsdl:input message="intf:attachRequest" name="attachRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:attachResponse" name="attachResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="detach">
+
+         <wsdl:input message="intf:detachRequest" name="detachRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:detachResponse" name="detachResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setContent" parameterOrder="content">
+
+         <wsdl:input message="intf:setContentRequest" name="setContentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setContentResponse" name="setContentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isClosing">
+
+         <wsdl:input message="intf:isClosingRequest" name="isClosingRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isClosingResponse" name="isClosingResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="scrollIntoView" parameterOrder="component">
+
+         <wsdl:input message="intf:scrollIntoViewRequest" name="scrollIntoViewRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:scrollIntoViewResponse" name="scrollIntoViewResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWindows">
+
+         <wsdl:input message="intf:getWindowsRequest" name="getWindowsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getWindowsResponse" name="getWindowsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeListenerRequest" name="removeListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeListenerResponse" name="removeListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeListenerRequest1" name="removeListenerRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeListenerResponse1" name="removeListenerResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener" parameterOrder="eventType target">
+
+         <wsdl:input message="intf:removeListenerRequest2" name="removeListenerRequest2">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeListenerResponse2" name="removeListenerResponse2">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener" parameterOrder="eventType target methodName">
+
+         <wsdl:input message="intf:removeListenerRequest3" name="removeListenerRequest3">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeListenerResponse3" name="removeListenerResponse3">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener" parameterOrder="eventType target method">
+
+         <wsdl:input message="intf:removeListenerRequest4" name="removeListenerRequest4">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeListenerResponse4" name="removeListenerResponse4">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCurrent">
+
+         <wsdl:input message="intf:getCurrentRequest" name="getCurrentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getCurrentResponse" name="getCurrentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAction" parameterOrder="action">
+
+         <wsdl:input message="intf:addActionRequest" name="addActionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addActionResponse" name="addActionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addListenerRequest" name="addListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addListenerResponse" name="addListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addListenerRequest1" name="addListenerRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addListenerResponse1" name="addListenerResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener" parameterOrder="eventType target methodName">
+
+         <wsdl:input message="intf:addListenerRequest2" name="addListenerRequest2">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addListenerResponse2" name="addListenerResponse2">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener" parameterOrder="eventType target method">
+
+         <wsdl:input message="intf:addListenerRequest3" name="addListenerRequest3">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addListenerResponse3" name="addListenerResponse3">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTheme">
+
+         <wsdl:input message="intf:getThemeRequest" name="getThemeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getThemeResponse" name="getThemeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSession" parameterOrder="session">
+
+         <wsdl:input message="intf:setSessionRequest" name="setSessionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setSessionResponse" name="setSessionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPage">
+
+         <wsdl:input message="intf:getPageRequest" name="getPageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getPageResponse" name="getPageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="doInit" parameterOrder="request uiId embedId">
+
+         <wsdl:input message="intf:doInitRequest" name="doInitRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:doInitResponse" name="doInitResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTheme" parameterOrder="theme">
+
+         <wsdl:input message="intf:setThemeRequest" name="setThemeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setThemeResponse" name="setThemeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="accessSynchronously" parameterOrder="runnable">
+
+         <wsdl:input message="intf:accessSynchronouslyRequest" name="accessSynchronouslyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:accessSynchronouslyResponse" name="accessSynchronouslyResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="intf:UIDetachedException" name="UIDetachedException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastHeartbeatTimestamp">
+
+         <wsdl:input message="intf:getLastHeartbeatTimestampRequest" name="getLastHeartbeatTimestampRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getLastHeartbeatTimestampResponse" name="getLastHeartbeatTimestampResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectorTracker">
+
+         <wsdl:input message="intf:getConnectorTrackerRequest" name="getConnectorTrackerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getConnectorTrackerResponse" name="getConnectorTrackerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastHeartbeatTimestamp" parameterOrder="lastHeartbeat">
+
+         <wsdl:input message="intf:setLastHeartbeatTimestampRequest" name="setLastHeartbeatTimestampRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setLastHeartbeatTimestampResponse" name="setLastHeartbeatTimestampResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeClickListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeClickListenerRequest" name="removeClickListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeClickListenerResponse" name="removeClickListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTooltipConfiguration">
+
+         <wsdl:input message="intf:getTooltipConfigurationRequest" name="getTooltipConfigurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getTooltipConfigurationResponse" name="getTooltipConfigurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getComponentCount">
+
+         <wsdl:input message="intf:getComponentCountRequest" name="getComponentCountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getComponentCountResponse" name="getComponentCountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isConnectorEnabled">
+
+         <wsdl:input message="intf:isConnectorEnabledRequest" name="isConnectorEnabledRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isConnectorEnabledResponse" name="isConnectorEnabledResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNotificationConfiguration">
+
+         <wsdl:input message="intf:getNotificationConfigurationRequest" name="getNotificationConfigurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getNotificationConfigurationResponse" name="getNotificationConfigurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLoadingIndicatorConfiguration">
+
+         <wsdl:input message="intf:getLoadingIndicatorConfigurationRequest" name="getLoadingIndicatorConfigurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getLoadingIndicatorConfigurationResponse" name="getLoadingIndicatorConfigurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeActionHandler" parameterOrder="actionHandler">
+
+         <wsdl:input message="intf:removeActionHandlerRequest" name="removeActionHandlerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeActionHandlerResponse" name="removeActionHandlerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFocusedComponent" parameterOrder="focusable">
+
+         <wsdl:input message="intf:setFocusedComponentRequest" name="setFocusedComponentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setFocusedComponentResponse" name="setFocusedComponentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReconnectDialogConfiguration">
+
+         <wsdl:input message="intf:getReconnectDialogConfigurationRequest" name="getReconnectDialogConfigurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getReconnectDialogConfigurationResponse" name="getReconnectDialogConfigurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPushConnection" parameterOrder="pushConnection">
+
+         <wsdl:input message="intf:setPushConnectionRequest" name="setPushConnectionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setPushConnectionResponse" name="setPushConnectionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removePollListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removePollListenerRequest" name="removePollListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removePollListenerResponse" name="removePollListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOverlayContainerLabel" parameterOrder="overlayContainerLabel">
+
+         <wsdl:input message="intf:setOverlayContainerLabelRequest" name="setOverlayContainerLabelRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setOverlayContainerLabelResponse" name="setOverlayContainerLabelResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastProcessedClientToServerId" parameterOrder="lastProcessedClientToServerId">
+
+         <wsdl:input message="intf:setLastProcessedClientToServerIdRequest" name="setLastProcessedClientToServerIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setLastProcessedClientToServerIdResponse" name="setLastProcessedClientToServerIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPushConnection">
+
+         <wsdl:input message="intf:getPushConnectionRequest" name="getPushConnectionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getPushConnectionResponse" name="getPushConnectionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastProcessedClientToServerId">
+
+         <wsdl:input message="intf:getLastProcessedClientToServerIdRequest" name="getLastProcessedClientToServerIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getLastProcessedClientToServerIdResponse" name="getLastProcessedClientToServerIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPushConfiguration">
+
+         <wsdl:input message="intf:getPushConfigurationRequest" name="getPushConfigurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getPushConfigurationResponse" name="getPushConfigurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOverlayContainerLabel">
+
+         <wsdl:input message="intf:getOverlayContainerLabelRequest" name="getOverlayContainerLabelRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getOverlayContainerLabelResponse" name="getOverlayContainerLabelResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSession">
+
+         <wsdl:input message="intf:getSessionRequest" name="getSessionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getSessionResponse" name="getSessionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="focus">
+
+         <wsdl:input message="intf:focusRequest" name="focusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:focusResponse" name="focusResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAction" parameterOrder="action">
+
+         <wsdl:input message="intf:removeActionRequest" name="removeActionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeActionResponse" name="removeActionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCurrent" parameterOrder="ui">
+
+         <wsdl:input message="intf:setCurrentRequest" name="setCurrentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setCurrentResponse" name="setCurrentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCaption" parameterOrder="caption">
+
+         <wsdl:input message="intf:setCaptionRequest" name="setCaptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setCaptionResponse" name="setCaptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getScrollLeft">
+
+         <wsdl:input message="intf:getScrollLeftRequest" name="getScrollLeftRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getScrollLeftResponse" name="getScrollLeftResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeVariables" parameterOrder="source variables">
+
+         <wsdl:input message="intf:changeVariablesRequest" name="changeVariablesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:changeVariablesResponse" name="changeVariablesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUI">
+
+         <wsdl:input message="intf:getUIRequest" name="getUIRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getUIResponse" name="getUIResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addWindow" parameterOrder="window">
+
+         <wsdl:input message="intf:addWindowRequest" name="addWindowRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addWindowResponse" name="addWindowResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPollInterval" parameterOrder="intervalInMillis">
+
+         <wsdl:input message="intf:setPollIntervalRequest" name="setPollIntervalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setPollIntervalResponse" name="setPollIntervalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeWindow" parameterOrder="window">
+
+         <wsdl:input message="intf:removeWindowRequest" name="removeWindowRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeWindowResponse" name="removeWindowResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="paintContent" parameterOrder="target">
+
+         <wsdl:input message="intf:paintContentRequest" name="paintContentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:paintContentResponse" name="paintContentResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="intf:PaintException" name="PaintException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResizeLazy">
+
+         <wsdl:input message="intf:isResizeLazyRequest" name="isResizeLazyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isResizeLazyResponse" name="isResizeLazyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStateType">
+
+         <wsdl:input message="intf:getStateTypeRequest" name="getStateTypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getStateTypeResponse" name="getStateTypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getScrollTop">
+
+         <wsdl:input message="intf:getScrollTopRequest" name="getScrollTopRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getScrollTopResponse" name="getScrollTopResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setScrollLeft" parameterOrder="scrollLeft">
+
+         <wsdl:input message="intf:setScrollLeftRequest" name="setScrollLeftRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setScrollLeftResponse" name="setScrollLeftResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setScrollTop" parameterOrder="scrollTop">
+
+         <wsdl:input message="intf:setScrollTopRequest" name="setScrollTopRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setScrollTopResponse" name="setScrollTopResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNavigator" parameterOrder="navigator">
+
+         <wsdl:input message="intf:setNavigatorRequest" name="setNavigatorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setNavigatorResponse" name="setNavigatorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUIId">
+
+         <wsdl:input message="intf:getUIIdRequest" name="getUIIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getUIIdResponse" name="getUIIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="caption">
+
+         <wsdl:input message="intf:showNotificationRequest" name="showNotificationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse" name="showNotificationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="notification">
+
+         <wsdl:input message="intf:showNotificationRequest1" name="showNotificationRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse1" name="showNotificationResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="caption description type htmlContentAllowed">
+
+         <wsdl:input message="intf:showNotificationRequest2" name="showNotificationRequest2">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse2" name="showNotificationResponse2">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="caption description">
+
+         <wsdl:input message="intf:showNotificationRequest3" name="showNotificationRequest3">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse3" name="showNotificationResponse3">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="caption type">
+
+         <wsdl:input message="intf:showNotificationRequest4" name="showNotificationRequest4">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse4" name="showNotificationResponse4">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification" parameterOrder="caption description type">
+
+         <wsdl:input message="intf:showNotificationRequest5" name="showNotificationRequest5">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:showNotificationResponse5" name="showNotificationResponse5">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTabIndex">
+
+         <wsdl:input message="intf:getTabIndexRequest" name="getTabIndexRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getTabIndexResponse" name="getTabIndexResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPollInterval">
+
+         <wsdl:input message="intf:getPollIntervalRequest" name="getPollIntervalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getPollIntervalResponse" name="getPollIntervalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addPollListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addPollListenerRequest" name="addPollListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addPollListenerResponse" name="addPollListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addActionHandler" parameterOrder="actionHandler">
+
+         <wsdl:input message="intf:addActionHandlerRequest" name="addActionHandlerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addActionHandlerResponse" name="addActionHandlerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResizeLazy" parameterOrder="resizeLazy">
+
+         <wsdl:input message="intf:setResizeLazyRequest" name="setResizeLazyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setResizeLazyResponse" name="setResizeLazyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addClickListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addClickListenerRequest" name="addClickListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addClickListenerResponse" name="addClickListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLocaleService">
+
+         <wsdl:input message="intf:getLocaleServiceRequest" name="getLocaleServiceRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getLocaleServiceResponse" name="getLocaleServiceResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmbedId">
+
+         <wsdl:input message="intf:getEmbedIdRequest" name="getEmbedIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getEmbedIdResponse" name="getEmbedIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="doRefresh" parameterOrder="request">
+
+         <wsdl:input message="intf:doRefreshRequest" name="doRefreshRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:doRefreshResponse" name="doRefreshResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTabIndex" parameterOrder="tabIndex">
+
+         <wsdl:input message="intf:setTabIndexRequest" name="setTabIndexRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setTabIndexResponse" name="setTabIndexResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNavigator">
+
+         <wsdl:input message="intf:getNavigatorRequest" name="getNavigatorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getNavigatorResponse" name="getNavigatorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContent">
+
+         <wsdl:input message="intf:getContentRequest" name="getContentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getContentResponse" name="getContentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidth" parameterOrder="width unit">
+
+         <wsdl:input message="intf:setWidthRequest" name="setWidthRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setWidthResponse" name="setWidthResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidth" parameterOrder="width">
+
+         <wsdl:input message="intf:setWidthRequest1" name="setWidthRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setWidthResponse1" name="setWidthResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeight" parameterOrder="height unit">
+
+         <wsdl:input message="intf:setHeightRequest" name="setHeightRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setHeightResponse" name="setHeightResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeight" parameterOrder="height">
+
+         <wsdl:input message="intf:setHeightRequest1" name="setHeightRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setHeightResponse1" name="setHeightResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addComponentAttachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addComponentAttachListenerRequest" name="addComponentAttachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addComponentAttachListenerResponse" name="addComponentAttachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addComponentDetachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addComponentDetachListenerRequest" name="addComponentDetachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addComponentDetachListenerResponse" name="addComponentDetachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeComponentDetachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeComponentDetachListenerRequest" name="removeComponentDetachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeComponentDetachListenerResponse" name="removeComponentDetachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeComponentAttachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeComponentAttachListenerRequest" name="removeComponentAttachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeComponentAttachListenerResponse" name="removeComponentAttachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readDesign" parameterOrder="design designContext">
+
+         <wsdl:input message="intf:readDesignRequest" name="readDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:readDesignResponse" name="readDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="writeDesign" parameterOrder="design designContext">
+
+         <wsdl:input message="intf:writeDesignRequest" name="writeDesignRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:writeDesignResponse" name="writeDesignResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeFromParent" parameterOrder="content">
+
+         <wsdl:input message="intf:removeFromParentRequest" name="removeFromParentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeFromParentResponse" name="removeFromParentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getParent">
+
+         <wsdl:input message="intf:getParentRequest" name="getParentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getParentResponse" name="getParentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReadOnly" parameterOrder="readOnly">
+
+         <wsdl:input message="intf:setReadOnlyRequest" name="setReadOnlyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setReadOnlyResponse" name="setReadOnlyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdl:input message="intf:getIdRequest" name="getIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getIdResponse" name="getIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isReadOnly">
+
+         <wsdl:input message="intf:isReadOnlyRequest" name="isReadOnlyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isReadOnlyResponse" name="isReadOnlyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setParent" parameterOrder="parent">
+
+         <wsdl:input message="intf:setParentRequest" name="setParentRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setParentResponse" name="setParentResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getData">
+
+         <wsdl:input message="intf:getDataRequest" name="getDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getDataResponse" name="getDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLocale" parameterOrder="locale">
+
+         <wsdl:input message="intf:setLocaleRequest" name="setLocaleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setLocaleResponse" name="setLocaleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLocale">
+
+         <wsdl:input message="intf:getLocaleRequest" name="getLocaleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getLocaleResponse" name="getLocaleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isEnabled">
+
+         <wsdl:input message="intf:isEnabledRequest" name="isEnabledRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isEnabledResponse" name="isEnabledResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isVisible">
+
+         <wsdl:input message="intf:isVisibleRequest" name="isVisibleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isVisibleResponse" name="isVisibleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnabled" parameterOrder="enabled">
+
+         <wsdl:input message="intf:setEnabledRequest" name="setEnabledRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setEnabledResponse" name="setEnabledResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setImmediate" parameterOrder="immediate">
+
+         <wsdl:input message="intf:setImmediateRequest" name="setImmediateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setImmediateResponse" name="setImmediateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isImmediate">
+
+         <wsdl:input message="intf:isImmediateRequest" name="isImmediateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isImmediateResponse" name="isImmediateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDescription" parameterOrder="description">
+
+         <wsdl:input message="intf:setDescriptionRequest" name="setDescriptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setDescriptionResponse" name="setDescriptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDescription">
+
+         <wsdl:input message="intf:getDescriptionRequest" name="getDescriptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getDescriptionResponse" name="getDescriptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setVisible" parameterOrder="visible">
+
+         <wsdl:input message="intf:setVisibleRequest" name="setVisibleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setVisibleResponse" name="setVisibleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setData" parameterOrder="data">
+
+         <wsdl:input message="intf:setDataRequest" name="setDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setDataResponse" name="setDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId" parameterOrder="id">
+
+         <wsdl:input message="intf:setIdRequest" name="setIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setIdResponse" name="setIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCaption">
+
+         <wsdl:input message="intf:getCaptionRequest" name="getCaptionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getCaptionResponse" name="getCaptionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getErrorMessage">
+
+         <wsdl:input message="intf:getErrorMessageRequest" name="getErrorMessageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getErrorMessageResponse" name="getErrorMessageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWidth">
+
+         <wsdl:input message="intf:getWidthRequest" name="getWidthRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getWidthResponse" name="getWidthResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHeight">
+
+         <wsdl:input message="intf:getHeightRequest" name="getHeightRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getHeightResponse" name="getHeightResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidthUndefined">
+
+         <wsdl:input message="intf:setWidthUndefinedRequest" name="setWidthUndefinedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setWidthUndefinedResponse" name="setWidthUndefinedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPrimaryStyleName" parameterOrder="style">
+
+         <wsdl:input message="intf:setPrimaryStyleNameRequest" name="setPrimaryStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setPrimaryStyleNameResponse" name="setPrimaryStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrimaryStyleName">
+
+         <wsdl:input message="intf:getPrimaryStyleNameRequest" name="getPrimaryStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getPrimaryStyleNameResponse" name="getPrimaryStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setComponentError" parameterOrder="componentError">
+
+         <wsdl:input message="intf:setComponentErrorRequest" name="setComponentErrorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setComponentErrorResponse" name="setComponentErrorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addShortcutListener" parameterOrder="shortcut">
+
+         <wsdl:input message="intf:addShortcutListenerRequest" name="addShortcutListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addShortcutListenerResponse" name="addShortcutListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getComponentError">
+
+         <wsdl:input message="intf:getComponentErrorRequest" name="getComponentErrorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getComponentErrorResponse" name="getComponentErrorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addContextClickListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addContextClickListenerRequest" name="addContextClickListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addContextClickListenerResponse" name="addContextClickListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeContextClickListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeContextClickListenerRequest" name="removeContextClickListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeContextClickListenerResponse" name="removeContextClickListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="beforeClientResponse" parameterOrder="initial">
+
+         <wsdl:input message="intf:beforeClientResponseRequest" name="beforeClientResponseRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:beforeClientResponseResponse" name="beforeClientResponseResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeShortcutListener" parameterOrder="shortcut">
+
+         <wsdl:input message="intf:removeShortcutListenerRequest" name="removeShortcutListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeShortcutListenerResponse" name="removeShortcutListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeightUndefined">
+
+         <wsdl:input message="intf:setHeightUndefinedRequest" name="setHeightUndefinedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setHeightUndefinedResponse" name="setHeightUndefinedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIcon" parameterOrder="icon">
+
+         <wsdl:input message="intf:setIconRequest" name="setIconRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setIconResponse" name="setIconResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIcon">
+
+         <wsdl:input message="intf:getIconRequest" name="getIconRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getIconResponse" name="getIconResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStyleName" parameterOrder="style">
+
+         <wsdl:input message="intf:setStyleNameRequest" name="setStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setStyleNameResponse" name="setStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStyleName" parameterOrder="style add">
+
+         <wsdl:input message="intf:setStyleNameRequest1" name="setStyleNameRequest1">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setStyleNameResponse1" name="setStyleNameResponse1">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWidthUnits">
+
+         <wsdl:input message="intf:getWidthUnitsRequest" name="getWidthUnitsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getWidthUnitsResponse" name="getWidthUnitsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHeightUnits">
+
+         <wsdl:input message="intf:getHeightUnitsRequest" name="getHeightUnitsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getHeightUnitsResponse" name="getHeightUnitsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addStyleName" parameterOrder="style">
+
+         <wsdl:input message="intf:addStyleNameRequest" name="addStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addStyleNameResponse" name="addStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSizeFull">
+
+         <wsdl:input message="intf:setSizeFullRequest" name="setSizeFullRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setSizeFullResponse" name="setSizeFullResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeStyleName" parameterOrder="style">
+
+         <wsdl:input message="intf:removeStyleNameRequest" name="removeStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeStyleNameResponse" name="removeStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSizeUndefined">
+
+         <wsdl:input message="intf:setSizeUndefinedRequest" name="setSizeUndefinedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setSizeUndefinedResponse" name="setSizeUndefinedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStyleName">
+
+         <wsdl:input message="intf:getStyleNameRequest" name="getStyleNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getStyleNameResponse" name="getStyleNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findAncestor" parameterOrder="parentType">
+
+         <wsdl:input message="intf:findAncestorRequest" name="findAncestorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:findAncestorResponse" name="findAncestorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDebugId">
+
+         <wsdl:input message="intf:getDebugIdRequest" name="getDebugIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getDebugIdResponse" name="getDebugIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCaptionAsHtml" parameterOrder="captionAsHtml">
+
+         <wsdl:input message="intf:setCaptionAsHtmlRequest" name="setCaptionAsHtmlRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setCaptionAsHtmlResponse" name="setCaptionAsHtmlResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCaptionAsHtml">
+
+         <wsdl:input message="intf:isCaptionAsHtmlRequest" name="isCaptionAsHtmlRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isCaptionAsHtmlResponse" name="isCaptionAsHtmlResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResponsive">
+
+         <wsdl:input message="intf:isResponsiveRequest" name="isResponsiveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isResponsiveResponse" name="isResponsiveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDebugId" parameterOrder="id">
+
+         <wsdl:input message="intf:setDebugIdRequest" name="setDebugIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setDebugIdResponse" name="setDebugIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResponsive" parameterOrder="responsive">
+
+         <wsdl:input message="intf:setResponsiveRequest" name="setResponsiveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setResponsiveResponse" name="setResponsiveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="equals" parameterOrder="obj">
+
+         <wsdl:input message="intf:equalsRequest" name="equalsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:equalsResponse" name="equalsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="hashCode">
+
+         <wsdl:input message="intf:hashCodeRequest" name="hashCodeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:hashCodeResponse" name="hashCodeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExtensions">
+
+         <wsdl:input message="intf:getExtensionsRequest" name="getExtensionsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getExtensionsResponse" name="getExtensionsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isAttached">
+
+         <wsdl:input message="intf:isAttachedRequest" name="isAttachedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:isAttachedResponse" name="isAttachedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getErrorHandler">
+
+         <wsdl:input message="intf:getErrorHandlerRequest" name="getErrorHandlerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getErrorHandlerResponse" name="getErrorHandlerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setErrorHandler" parameterOrder="errorHandler">
+
+         <wsdl:input message="intf:setErrorHandlerRequest" name="setErrorHandlerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:setErrorHandlerResponse" name="setErrorHandlerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeExtension" parameterOrder="extension">
+
+         <wsdl:input message="intf:removeExtensionRequest" name="removeExtensionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeExtensionResponse" name="removeExtensionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getListeners" parameterOrder="eventType">
+
+         <wsdl:input message="intf:getListenersRequest" name="getListenersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getListenersResponse" name="getListenersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addDetachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addDetachListenerRequest" name="addDetachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addDetachListenerResponse" name="addDetachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAttachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeAttachListenerRequest" name="removeAttachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeAttachListenerResponse" name="removeAttachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeDetachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:removeDetachListenerRequest" name="removeDetachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:removeDetachListenerResponse" name="removeDetachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAttachListener" parameterOrder="listener">
+
+         <wsdl:input message="intf:addAttachListenerRequest" name="addAttachListenerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:addAttachListenerResponse" name="addAttachListenerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="retrievePendingRpcCalls">
+
+         <wsdl:input message="intf:retrievePendingRpcCallsRequest" name="retrievePendingRpcCallsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:retrievePendingRpcCallsResponse" name="retrievePendingRpcCallsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="markAsDirtyRecursive">
+
+         <wsdl:input message="intf:markAsDirtyRecursiveRequest" name="markAsDirtyRecursiveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:markAsDirtyRecursiveResponse" name="markAsDirtyRecursiveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="requestRepaintAll">
+
+         <wsdl:input message="intf:requestRepaintAllRequest" name="requestRepaintAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:requestRepaintAllResponse" name="requestRepaintAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="handleConnectorRequest" parameterOrder="request response path">
+
+         <wsdl:input message="intf:handleConnectorRequestRequest" name="handleConnectorRequestRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:handleConnectorRequestResponse" name="handleConnectorRequestResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllChildrenIterable" parameterOrder="connector">
+
+         <wsdl:input message="intf:getAllChildrenIterableRequest" name="getAllChildrenIterableRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getAllChildrenIterableResponse" name="getAllChildrenIterableResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="markAsDirty">
+
+         <wsdl:input message="intf:markAsDirtyRequest" name="markAsDirtyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:markAsDirtyResponse" name="markAsDirtyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectorId">
+
+         <wsdl:input message="intf:getConnectorIdRequest" name="getConnectorIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getConnectorIdResponse" name="getConnectorIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="requestRepaint">
+
+         <wsdl:input message="intf:requestRepaintRequest" name="requestRepaintRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:requestRepaintResponse" name="requestRepaintResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRpcManager" parameterOrder="rpcInterfaceName">
+
+         <wsdl:input message="intf:getRpcManagerRequest" name="getRpcManagerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:getRpcManagerResponse" name="getRpcManagerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="encodeState">
+
+         <wsdl:input message="intf:encodeStateRequest" name="encodeStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="intf:encodeStateResponse" name="encodeStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SettingReadingSessionAttributesUISoapBinding" type="intf:SettingReadingSessionAttributesUI">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="iterator">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="iteratorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="iteratorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="push">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="pushRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="pushResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="access">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="accessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="accessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="close">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="closeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="closeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="attach">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="attachRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="attachResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="detach">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="detachRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="detachResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setContent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setContentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setContentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isClosing">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isClosingRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isClosingResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="scrollIntoView">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="scrollIntoViewRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="scrollIntoViewResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWindows">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWindowsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWindowsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeListenerRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeListenerResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeListenerRequest2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeListenerResponse2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeListenerRequest3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeListenerResponse3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeListenerRequest4">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeListenerResponse4">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCurrent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCurrentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCurrentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addActionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addActionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addListenerRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addListenerResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addListenerRequest2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addListenerResponse2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addListenerRequest3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addListenerResponse3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTheme">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getThemeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getThemeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSession">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSessionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSessionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="doInit">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="doInitRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="doInitResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTheme">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setThemeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setThemeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="accessSynchronously">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="accessSynchronouslyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="accessSynchronouslyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="UIDetachedException">
+
+            <wsdlsoap:fault name="UIDetachedException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastHeartbeatTimestamp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLastHeartbeatTimestampRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLastHeartbeatTimestampResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectorTracker">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getConnectorTrackerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getConnectorTrackerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastHeartbeatTimestamp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLastHeartbeatTimestampRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLastHeartbeatTimestampResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeClickListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeClickListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeClickListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTooltipConfiguration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTooltipConfigurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTooltipConfigurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getComponentCount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getComponentCountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getComponentCountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isConnectorEnabled">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isConnectorEnabledRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isConnectorEnabledResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNotificationConfiguration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNotificationConfigurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNotificationConfigurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLoadingIndicatorConfiguration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLoadingIndicatorConfigurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLoadingIndicatorConfigurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeActionHandler">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeActionHandlerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeActionHandlerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFocusedComponent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFocusedComponentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFocusedComponentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getReconnectDialogConfiguration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getReconnectDialogConfigurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getReconnectDialogConfigurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPushConnection">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPushConnectionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPushConnectionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removePollListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removePollListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removePollListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOverlayContainerLabel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setOverlayContainerLabelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setOverlayContainerLabelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLastProcessedClientToServerId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLastProcessedClientToServerIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLastProcessedClientToServerIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPushConnection">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPushConnectionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPushConnectionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLastProcessedClientToServerId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLastProcessedClientToServerIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLastProcessedClientToServerIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPushConfiguration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPushConfigurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPushConfigurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getOverlayContainerLabel">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getOverlayContainerLabelRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getOverlayContainerLabelResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSession">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSessionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSessionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="focus">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="focusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="focusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeActionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeActionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCurrent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCurrentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCurrentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCaption">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCaptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCaptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getScrollLeft">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getScrollLeftRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getScrollLeftResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="changeVariables">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="changeVariablesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="changeVariablesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUI">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUIRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUIResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addWindow">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addWindowRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addWindowResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPollInterval">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPollIntervalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPollIntervalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeWindow">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeWindowRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeWindowResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="paintContent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="paintContentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="paintContentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="PaintException">
+
+            <wsdlsoap:fault name="PaintException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResizeLazy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isResizeLazyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isResizeLazyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStateType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStateTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStateTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getScrollTop">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getScrollTopRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getScrollTopResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setScrollLeft">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setScrollLeftRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setScrollLeftResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setScrollTop">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setScrollTopRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setScrollTopResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setNavigator">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setNavigatorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setNavigatorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUIId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUIIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUIIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse2">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse3">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest4">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse4">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="showNotification">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="showNotificationRequest5">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="showNotificationResponse5">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTabIndex">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTabIndexRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTabIndexResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPollInterval">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPollIntervalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPollIntervalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addPollListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addPollListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addPollListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addActionHandler">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addActionHandlerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addActionHandlerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResizeLazy">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setResizeLazyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setResizeLazyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addClickListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addClickListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addClickListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLocaleService">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLocaleServiceRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLocaleServiceResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmbedId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmbedIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmbedIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="doRefresh">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="doRefreshRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="doRefreshResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTabIndex">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setTabIndexRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setTabIndexResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNavigator">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNavigatorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNavigatorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getContent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getContentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getContentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidth">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setWidthRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setWidthResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidth">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setWidthRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setWidthResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeight">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHeightRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHeightResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeight">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHeightRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHeightResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addComponentAttachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addComponentAttachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addComponentAttachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addComponentDetachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addComponentDetachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addComponentDetachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeComponentDetachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeComponentDetachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeComponentDetachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeComponentAttachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeComponentAttachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeComponentAttachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="readDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="readDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="writeDesign">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="writeDesignRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="writeDesignResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeFromParent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeFromParentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeFromParentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getParent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getParentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getParentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setReadOnly">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setReadOnlyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setReadOnlyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isReadOnly">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isReadOnlyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isReadOnlyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setParent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setParentRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setParentResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLocale">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLocaleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLocaleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLocale">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLocaleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLocaleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isEnabled">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isEnabledRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isEnabledResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isVisible">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isVisibleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isVisibleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEnabled">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEnabledRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEnabledResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setImmediate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setImmediateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setImmediateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isImmediate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isImmediateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isImmediateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDescription">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDescriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDescriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDescription">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDescriptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDescriptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setVisible">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setVisibleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setVisibleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCaption">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCaptionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCaptionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getErrorMessage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getErrorMessageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getErrorMessageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWidth">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWidthRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWidthResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHeight">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHeightRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHeightResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setWidthUndefined">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setWidthUndefinedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setWidthUndefinedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setPrimaryStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setPrimaryStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setPrimaryStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getPrimaryStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getPrimaryStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getPrimaryStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setComponentError">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setComponentErrorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setComponentErrorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addShortcutListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addShortcutListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addShortcutListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getComponentError">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getComponentErrorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getComponentErrorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addContextClickListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addContextClickListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addContextClickListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeContextClickListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeContextClickListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeContextClickListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="beforeClientResponse">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="beforeClientResponseRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="beforeClientResponseResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeShortcutListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeShortcutListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeShortcutListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setHeightUndefined">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setHeightUndefinedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setHeightUndefinedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIcon">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setIconRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setIconResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIcon">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIconRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIconResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setStyleNameRequest1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setStyleNameResponse1">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getWidthUnits">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getWidthUnitsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getWidthUnitsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHeightUnits">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHeightUnitsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHeightUnitsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSizeFull">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSizeFullRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSizeFullResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setSizeUndefined">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setSizeUndefinedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setSizeUndefinedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getStyleName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStyleNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStyleNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findAncestor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findAncestorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findAncestorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDebugId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDebugIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDebugIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCaptionAsHtml">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCaptionAsHtmlRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCaptionAsHtmlResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isCaptionAsHtml">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isCaptionAsHtmlRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isCaptionAsHtmlResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResponsive">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isResponsiveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isResponsiveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDebugId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDebugIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDebugIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResponsive">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setResponsiveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setResponsiveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="equals">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="equalsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="equalsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="hashCode">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="hashCodeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="hashCodeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExtensions">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getExtensionsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getExtensionsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isAttached">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isAttachedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isAttachedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getErrorHandler">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getErrorHandlerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getErrorHandlerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setErrorHandler">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setErrorHandlerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setErrorHandlerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeExtension">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeExtensionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeExtensionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getListeners">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getListenersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getListenersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addDetachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addDetachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addDetachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAttachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeAttachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeAttachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeDetachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeDetachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeDetachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAttachListener">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addAttachListenerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addAttachListenerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="retrievePendingRpcCalls">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="retrievePendingRpcCallsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="retrievePendingRpcCallsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="markAsDirtyRecursive">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="markAsDirtyRecursiveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="markAsDirtyRecursiveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="requestRepaintAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="requestRepaintAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="requestRepaintAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="handleConnectorRequest">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="handleConnectorRequestRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="handleConnectorRequestResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllChildrenIterable">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllChildrenIterableRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllChildrenIterableResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="markAsDirty">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="markAsDirtyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="markAsDirtyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectorId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getConnectorIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getConnectorIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="requestRepaint">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="requestRepaintRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="requestRepaintResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getRpcManager">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRpcManagerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRpcManagerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="encodeState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="encodeStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="encodeStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SettingReadingSessionAttributesUIService">
+
+      <wsdl:port binding="intf:SettingReadingSessionAttributesUISoapBinding" name="SettingReadingSessionAttributesUI">
+
+         <wsdlsoap:address location="http://localhost:8080/uipro/services/SettingReadingSessionAttributesUI"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
