@@ -1,0 +1,14 @@
+{
+    "intents": [{
+        "slots": [{
+                "name": "Color",
+                "type": "AMAZON.Color"
+            },
+            {
+                "name": "element",
+                "type": "UIElement"
+            }
+        ],
+        "intent": "AddElement"
+    }]
+}
